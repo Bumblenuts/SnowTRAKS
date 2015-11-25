@@ -44,6 +44,14 @@
       "title": "Customers",
       "addToNavigation": true,
       "icon": "organize"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "mapView",
+      "components": [],
+      "title": "Map",
+      "addToNavigation": true,
+      "icon": "globe"
     }
   ],
   "dataProviders": [
