@@ -1,0 +1,48 @@
+{
+  "ProjectName": "SnowTRAKS Hybrid",
+  "ProjectGuid": "31760402-aadc-430e-9bbf-5d6fe3cb3f5b",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.SnowTRAKSHybrid",
+  "DisplayName": "SnowTRAKS Hybrid",
+  "Author": "",
+  "Description": "SnowTRAKS Hybrid",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.7.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{b9a147bf-08e8-48ca-a887-814cb7d805d3}",
+  "WP8ProductID": "{bafb3f20-85e1-4c73-8c69-8102e63f920e}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.SnowTRAKSHybrid",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ],
+  "CorePlugins": [
+    "org.apache.cordova.network-information"
+  ]
+}
