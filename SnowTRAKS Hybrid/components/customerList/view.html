@@ -1,0 +1,14 @@
+<div data-role="view" data-title="Customers" data-layout="main" data-model="app.customerList" data-show="app.customerList.onShow" data-after-show="app.customerList.afterShow">
+    <!-- START_CUSTOM_CODE_customerList -->
+    <!-- END_CUSTOM_CODE_customerList -->
+    <ul data-role="listview" data-style="inset" data-template="customerListModelTemplate" data-bind="{ source: customerListModel.dataSource}" data-pull-to-refresh="false" data-endless-scroll="false">
+    </ul>
+    <!-- START_CUSTOM_CODE_customerListModel -->
+    <!-- END_CUSTOM_CODE_customerListModel -->
+    <script type="text/x-kendo-template" id="customerListModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['Text'] #</h3>
+
+        </div>
+    </script>
+</div>
