@@ -9,6 +9,18 @@ app.customerList = kendo.observable({
 // END_CUSTOM_CODE_customerList
 (function(parent) {
     var dataProvider = app.data.defaultProvider,
+        processImage = function(img) {
+            if (!img) {
+                var empty1x1png = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQI12NgYAAAAAMAASDVlMcAAAAASUVORK5CYII=';
+                img = 'data:image/png;base64,' + empty1x1png;
+            } else if (img.slice(0, 4) !== 'http' &&
+                img.slice(0, 2) !== '//' && img.slice(0, 5) !== 'data:') {
+                var setup = dataProvider.setup || {};
+                img = setup.scheme + ':' + setup.url + setup.apiKey + '/Files/' + img + '/Download';
+            }
+
+            return img;
+        },
         flattenLocationProperties = function(dataItem) {
             var propName, propValue,
                 isLocation = function(value) {
@@ -30,7 +42,7 @@ app.customerList = kendo.observable({
         dataSourceOptions = {
             type: 'everlive',
             transport: {
-                typeName: 'Activities',
+                typeName: 'Customers',
                 dataProvider: dataProvider
             },
 
@@ -39,14 +51,25 @@ app.customerList = kendo.observable({
                 for (var i = 0; i < data.length; i++) {
                     var dataItem = data[i];
 
+                    dataItem['PhotoUrl'] =
+                        processImage(dataItem['Photo']);
+
                     flattenLocationProperties(dataItem);
                 }
             },
             schema: {
                 model: {
                     fields: {
-                        'Text': {
-                            field: 'Text',
+                        'CustomerName': {
+                            field: 'CustomerName',
+                            defaultValue: ''
+                        },
+                        'Address': {
+                            field: 'Address',
+                            defaultValue: ''
+                        },
+                        'Photo': {
+                            field: 'Photo',
                             defaultValue: ''
                         },
                     }
@@ -55,7 +78,20 @@ app.customerList = kendo.observable({
         },
         dataSource = new kendo.data.DataSource(dataSourceOptions),
         customerListModel = kendo.observable({
-            dataSource: dataSource
+            dataSource: dataSource,
+            itemClick: function(e) {
+                app.mobileApp.navigate('#components/customerList/details.html?uid=' + e.dataItem.uid);
+            },
+            detailsShow: function(e) {
+                var item = e.view.params.uid,
+                    dataSource = customerListModel.get('dataSource'),
+                    itemModel = dataSource.getByUid(item);
+                if (!itemModel.HomeTel) {
+                    itemModel.HomeTel = String.fromCharCode(160);
+                }
+                customerListModel.set('currentItem', itemModel);
+            },
+            currentItem: null
         });
 
     parent.set('customerListModel', customerListModel);

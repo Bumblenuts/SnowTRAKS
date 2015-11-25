@@ -34,9 +34,13 @@
           "type": "kendo-ui-mobile:list",
           "name": "customerListModel",
           "dataProvider": "defaultProvider",
-          "collection": "Activities",
-          "headerField": "Text",
-          "masterDetails": false,
+          "collection": "Customers",
+          "imageField": "Photo",
+          "headerField": "CustomerName",
+          "subHeaderField": "Address",
+          "masterDetails": true,
+          "detailHeaderField": "HomeTel",
+          "detailSubHeaderField": "Email",
           "pullToRefresh": false,
           "endlessScroll": false
         }
@@ -135,15 +139,6 @@
       "title": "DefaultProvider",
       "source": "everlive",
       "everliveKey": "NNJQfI3J8K64hNJC",
-      "offlineStorage": true
-    },
-    {
-      "type": "kendo-ui-mobile:dataProvider",
-      "name": "leducSnowRemovalBackend",
-      "everliveUrl": "//platform.telerik.com/bs-api/v1/",
-      "title": "Leduc Snow Removal / Leduc Snow Removal Backend",
-      "source": "everlive",
-      "everliveKey": "G0iqUYZVasNCdnb5",
       "offlineStorage": true
     }
   ],
