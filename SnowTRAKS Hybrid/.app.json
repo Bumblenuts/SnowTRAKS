@@ -52,6 +52,79 @@
       "title": "Map",
       "addToNavigation": true,
       "icon": "globe"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "aboutView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:about",
+          "name": "aboutViewModel",
+          "appName": "SnowTRAKS",
+          "appVersion": "Version 0.001",
+          "appDescription": "An app to map the location of snow removal customers.",
+          "contactButton": true,
+          "contactLabel": "Contact us",
+          "contactMail": "d.branson@fieldtraks.ca",
+          "facebookButton": true,
+          "facebookLabel": "Like us on Facebook",
+          "facebookLink": "https://www.facebook.com/FieldTRAKS",
+          "twitterButton": false
+        }
+      ],
+      "title": "About",
+      "addToNavigation": true,
+      "icon": "info"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "addCustomer",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "customerName",
+              "title": "Name",
+              "inputType": "text"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "streetAddress",
+              "title": "Street Address",
+              "inputType": "text"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "homeTel",
+              "title": "Home",
+              "inputType": "tel",
+              "placeholder": "613 555 1234"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "mobile",
+              "title": "Mobile",
+              "inputType": "tel",
+              "placeholder": "613 555 1234"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "email",
+              "title": "Email",
+              "inputType": "email",
+              "placeholder": "example@example.com"
+            }
+          ],
+          "name": "addCustomerModel",
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Add Customer",
+      "addToNavigation": true,
+      "icon": "bookmarks"
     }
   ],
   "dataProviders": [

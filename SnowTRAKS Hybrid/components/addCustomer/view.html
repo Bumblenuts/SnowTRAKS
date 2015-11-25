@@ -1,0 +1,52 @@
+<div data-role="view" data-title="Add Customer" data-layout="main" data-model="app.addCustomer" data-show="app.addCustomer.onShow" data-after-show="app.addCustomer.afterShow">
+    <div id="addCustomerModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li>
+
+                    <label>Name
+                        <input data-bind="value: addCustomerModel.fields.customerName" type="text">
+                    </label>
+
+                </li>
+                <li>
+
+                    <label>Street Address
+                        <input data-bind="value: addCustomerModel.fields.streetAddress" type="text">
+                    </label>
+
+                </li>
+                <li>
+
+                    <label>Home
+                        <input data-bind="value: addCustomerModel.fields.homeTel" placeholder="613 555 1234" type="tel">
+                    </label>
+
+                </li>
+                <li>
+
+                    <label>Mobile
+                        <input data-bind="value: addCustomerModel.fields.mobile" placeholder="613 555 1234" type="tel">
+                    </label>
+
+                </li>
+                <li>
+
+                    <label>Email
+                        <input data-bind="value: addCustomerModel.fields.email" placeholder="example@example.com" type="email">
+                    </label>
+
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: addCustomerModel.cancel }">Cancel</a>
+                <a class="primary" data-role="button" data-bind="events: { click: addCustomerModel.submit }">Confirm</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_addCustomerModel -->
+        <!-- END_CUSTOM_CODE_addCustomerModel -->
+    </div>
+    <!-- START_CUSTOM_CODE_addCustomer -->
+    <!-- END_CUSTOM_CODE_addCustomer -->
+</div>
