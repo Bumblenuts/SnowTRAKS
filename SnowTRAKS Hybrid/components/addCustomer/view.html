@@ -1,11 +1,3 @@
-	<head>
-		<title>Camera Sample</title>
-		<meta charset="utf-8">
-        <link rel="stylesheet" href="styles/main.css" />
-		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-		<script type="text/javascript" charset="utf-8" src="scripts/main.js"></script>
-	</head>
-
 <div data-role="view" data-title="Add Customer" data-layout="main" data-model="app.addCustomer" data-show="app.addCustomer.onShow" data-after-show="app.addCustomer.afterShow">
     <div id="addCustomerModel" class="form-view">
         <form>
@@ -45,51 +37,32 @@
                     </label>
 
                 </li>
-                
-                <li>
-
-                    <label>Photo
-                        <button class="button" id="capturePhotoButton">Take Photo</button>
-                    </label>
-
-                </li>                
-                
-                <li>
-
-                    <label>GPS
-                        <button class="button" id="watchButton">Get GPS</button>
-                    </label>
-
-                </li>                  
-                                
             </ul>
-           
+
             <div class="button-group">
                 <a data-role="button" data-bind="events: { click: addCustomerModel.cancel }">Cancel</a>
                 <a class="primary" data-role="button" data-bind="events: { click: addCustomerModel.submit }">Confirm</a>
             </div>
-            
         </form>
         <!-- START_CUSTOM_CODE_addCustomerModel -->
         <!-- END_CUSTOM_CODE_addCustomerModel -->
     </div>
-    
+
     <!-- START_CUSTOM_CODE_addCustomer -->
- 
-		<div class="content">
-            <div class="action-area ch30">
-                <button class="button dh" id="watchButton">Start Geolocation Watch</button>
-			    <button class="button dh" id="refreshButton">Refresh Geolocation</button>
+
+    <div class="content">
+        <div class="action-area ch30">
+            <button class="button dh" id="watchButton">Start Geolocation Watch</button>
+            <button class="button dh" id="refreshButton">Refresh Geolocation</button>
+        </div>
+        <div class="result-area ch70">
+            <div class="results">
+                <div id="results" class="desc"></div>
             </div>
-			<div class="result-area ch70">
-                <div class="results">
-                    <div id="results" class="desc"></div>
-                </div>
-                <div class="separator"></div>
-            </div>
-		</div>
- 
-   
-    
+            <div class="separator"></div>
+        </div>
+    </div>
+
+
     <!-- END_CUSTOM_CODE_addCustomer -->
 </div>

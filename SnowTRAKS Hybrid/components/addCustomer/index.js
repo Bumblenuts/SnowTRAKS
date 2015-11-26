@@ -25,5 +25,4 @@ app.addCustomer = kendo.observable({
 
 // START_CUSTOM_CODE_addCustomerModel
 
-
 // END_CUSTOM_CODE_addCustomerModel

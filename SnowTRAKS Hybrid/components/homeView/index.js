@@ -17,7 +17,6 @@ app.homeView = kendo.observable({
                 if (error.message) {
                     alert(error.message);
                 }
-
                 return false;
             }
 
@@ -67,7 +66,6 @@ app.homeView = kendo.observable({
                 if (!model.validateData(model)) {
                     return false;
                 }
-
                 provider.Users.login(email, password, successHandler, init);
             },
             register: function() {

@@ -1,3 +1,10 @@
 {
-  "CordovaPluginVariables": {}
+  "CordovaPluginVariables": {},
+  "CorePlugins": [
+    "org.apache.cordova.camera",
+    "org.apache.cordova.device",
+    "org.apache.cordova.file",
+    "org.apache.cordova.geolocation",
+    "org.apache.cordova.network-information"
+  ]
 }

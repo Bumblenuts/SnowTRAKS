@@ -1,3 +1,5 @@
+'use strict';
+
 (function() {
     var app = {
         data: {}
@@ -6,11 +8,9 @@
     var bootstrap = function() {
         $(function() {
             app.mobileApp = new kendo.mobile.Application(document.body, {
-
                 transition: 'slide',
                 skin: 'flat',
-                initial: 'components/homeView/view.html',
-                statusBarStyle: 'black-translucent'
+                initial: 'components/homeView/view.html'
             });
         });
     };
@@ -24,11 +24,11 @@
             var element = document.getElementById('appDrawer');
             if (typeof(element) != 'undefined' && element !== null) {
                 if (window.navigator.msPointerEnabled) {
-                    $("#navigation-container").on("MSPointerDown", "a", function(event) {
+                    $('#navigation-container').on('MSPointerDown', 'a', function(event) {
                         app.keepActiveState($(this));
                     });
                 } else {
-                    $("#navigation-container").on("touchstart", "a", function(event) {
+                    $('#navigation-container').on('touchstart', 'a', function(event) {
                         app.keepActiveState($(this));
                     });
                 }
@@ -42,7 +42,7 @@
 
     app.keepActiveState = function _keepActiveState(item) {
         var currentItem = item;
-        $("#navigation-container li a.active").removeClass("active");
+        $('#navigation-container li a.active').removeClass('active');
         currentItem.addClass('active');
     };
 
