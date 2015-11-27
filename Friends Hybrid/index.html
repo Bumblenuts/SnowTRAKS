@@ -21,6 +21,11 @@
         <script src="scripts/app/comments.js"></script>
         <script src="scripts/app/add-activity.js"></script>
         <script src="scripts/app/add-comment.js"></script>
+        
+        <script src="scripts/app/add-customer.js"></script>
+    	<script src="scripts/app/aboutView.js"></script>
+    	<script src="scripts/app/mapView.js"></script>
+    	<script src="scripts/app/customerList.js"></script>
 
         <link href="//fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
@@ -32,8 +37,17 @@
         </div>
         <!--WELCOME VIEW -->
         <div data-role="view" id="welcome" data-layout="default" class="welcome-scrn form-view" data-model="app.Login" data-init="app.Login.init" data-show="app.Login.show">
-            <div data-role="header"></div>
-            <h2 class="app-name">Friends <small>Sample Application</small></h2>
+          
+        <!--  <div data-role="header">    </div>  -->
+            
+        <header data-role="header">
+            <div data-role="navbar"> Snow Contract Mapper
+                <span data-role="view-title"></span>
+            </div>
+        </header>            
+            
+            
+            <h2 class="app-name">SnowTRAKS<small>Leduc Snow Removal Contracts</small></h2>
             <form id="login-form">
                 <ul data-role="listview" data-style="inset">
                     <li class="username"><input type="text" id="loginUsername" placeholder="username" required validationMessage="Username is required!"></li>
@@ -62,7 +76,7 @@
                 </li>
                 <li class="signup">
                     <p>Don't have an account?</p>
-                    <a data-role="button" href="views/signupView.html" class="btn">Sign up for free</a>
+                    <a data-role="button" href="views/signupView.html" class="btn">Sign up</a>
                 </li>
             </ol>
         </div>
