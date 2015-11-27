@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
         <title></title>
@@ -31,40 +31,51 @@
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
         <link href="styles/main.css" rel="stylesheet">
     </head>
-    <body id="friendsApp">
+
+    <body id="snowremovalApp">
         <div data-role="layout" data-id="default">
-            <!--View content will render here-->
         </div>
+
         <!--WELCOME VIEW -->
         <div data-role="view" id="welcome" data-layout="default" class="welcome-scrn form-view" data-model="app.Login" data-init="app.Login.init" data-show="app.Login.show">
           
         <!--  <div data-role="header">    </div>  -->
             
-        <header data-role="header">
+        <!--<header data-role="header">
             <div data-role="navbar"> Snow Contract Mapper
                 <span data-role="view-title"></span>
             </div>
-        </header>            
+
+        </header>-->            
             
-            
-            <h2 class="app-name">SnowTRAKS<small>Leduc Snow Removal Contracts</small></h2>
+            <div style="text-align: center">
+                <h2 class="app-name">SnowTRAKS<small>Leduc Snow Removal Contracts</small></h2>
+                <img src="styles/images/Snowplow.png" />
+            </div>
+
+            <br />
+
             <form id="login-form">
                 <ul data-role="listview" data-style="inset">
                     <li class="username"><input type="text" id="loginUsername" placeholder="username" required validationMessage="Username is required!"></li>
                     <li class="password"><input type="password" id="loginPassword" placeholder="password" required validationMessage="Password is required!"></li>
                 </ul>
             </form>
+
+            <br />
+
             <ol class="group-wrp">
                 <li>
                     <span id="login" data-role="touch" data-bind="events: { tap: login }">
                         <a data-role="button" class="btn btn-login">Login</a>
                     </span>
                 </li>
+
                 <li class="oauth cf">
                     <span id="loginWithFacebook" class="oauth-item" data-role="touch" data-bind="events: { tap: loginWithFacebook }">
                         <a data-role="button" class="btn btn-facebook hide-text">Facebook</a>
                     </span>
-                    <span id="loginWithGoogle" class="oauth-item" data-role="touch" data-bind="events: { tap: loginWithGoogle }">
+                    <!--<span id="loginWithGoogle" class="oauth-item" data-role="touch" data-bind="events: { tap: loginWithGoogle }">
                         <a data-role="button" class="btn btn-google hide-text">Google</a>
                     </span>
                     <span id="loginWithLiveID" class="oauth-item" data-role="touch" data-bind="events: { tap: loginWithLiveID }">
@@ -72,13 +83,19 @@
                     </span>
                     <span id="loginWithADSF" class="oauth-item" data-role="touch" data-bind="events: { tap: loginWithADSF }">
                         <a data-role="button" class="btn btn-adfs hide-text">ADFS</a>
-                    </span>
+                    </span>-->
                 </li>
+            </ol>
+
+            <br /><br /><br />
+
+            <ol class="group-wrp">
                 <li class="signup">
-                    <p>Don't have an account?</p>
+                    <p>Create an Account:</p>
                     <a data-role="button" href="views/signupView.html" class="btn">Sign up</a>
                 </li>
             </ol>
-        </div>
+
+</div>
     </body>
 </html>
