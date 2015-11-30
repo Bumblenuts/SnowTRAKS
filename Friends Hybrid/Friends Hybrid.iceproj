@@ -62,6 +62,8 @@
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
     <Content Include="kendo\typescript\jquery.d.ts" />
     <Content Include="kendo\typescript\kendo.mobile.d.ts" />
+    <Content Include="scripts\app\add-customer.js" />
+    <Content Include="scripts\app\customer.js" />
     <Content Include="scripts\app\customers.js" />
     <Content Include="scripts\app\activities.js" />
     <Content Include="scripts\app\activity.js" />
@@ -100,6 +102,10 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="styles\main.css" />
+    <Content Include="views\activitiesView.html" />
+    <Content Include="views\addCustomerView.html">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="views\customersView.html" />
     <Content Include="views\activityView.html" />
     <Content Include="views\addActivityView.html" />

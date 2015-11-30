@@ -10,30 +10,42 @@ app.Customers = (function () {
     // Customers model
     var CustomersModel = (function () {
 
-        var activityModel = {
+        var customersModel = {
 
             id: 'Id',
             fields: {
-                Text: {
-                    field: 'Text',
-                    defaultValue: ''
-                },
                 CreatedAt: {
                     field: 'CreatedAt',
                     defaultValue: new Date()
-                },
-                Picture: {
-                    fields: 'Picture',
-                    defaultValue: null
                 },
                 UserId: {
                     field: 'UserId',
                     defaultValue: null
                 },
-                Likes: {
-                    field: 'Likes',
-                    defaultValue: []
-                }
+                CustomerName: {
+                    fields: 'CustomerName',
+                    defaultValue: null
+                },
+                Email: {
+                    fields: 'Email',
+                    defaultValue: null
+                },
+                GPS: {
+                    fields: 'GPS',
+                    defaultValue: null
+                },
+                HomeTel: {
+                    fields: 'HomeTel',
+                    defaultValue: null
+                },
+                Mobile: {
+                    fields: 'Mobile',
+                    defaultValue: null
+                },
+                Picture: {
+                    fields: 'Picture',
+                    defaultValue: null
+                },
             },
             CreatedAtFormatted: function () {
 
@@ -72,7 +84,7 @@ app.Customers = (function () {
         var CustomersDataSource = new kendo.data.DataSource({
             type: 'everlive',
             schema: {
-                model: activityModel
+                model: customerModel
             },
             transport: {
                 // Required by Backend Services
@@ -98,10 +110,10 @@ app.Customers = (function () {
     // Customers view model
     var CustomersViewModel = (function () {
 
-        // Navigate to activityView When some activity is selected
-        var activitySelected = function (e) {
+        // Navigate to customerView when a customer is selected
+        var customerSelected = function (e) {
 
-            app.mobileApp.navigate('views/activityView.html?uid=' + e.data.uid);
+            app.mobileApp.navigate('views/customerView.html?uid=' + e.data.uid);
         };
 
         // Navigate to app home
@@ -122,7 +134,7 @@ app.Customers = (function () {
 
         return {
             Customers: CustomersModel.Customers,
-            activitySelected: activitySelected,
+            customerSelected: customerSelected,
             logout: logout
         };
 
