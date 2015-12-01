@@ -4,7 +4,7 @@
 
 var app = app || {};
 
-app.customer = (function () {
+app.Customer = (function () {
     'use strict'
     
     var $commentsContainer,
@@ -48,8 +48,8 @@ app.customer = (function () {
             var customer = customers.getByUid(customerUid);
             
             app.showConfirm(
-                appSettings.messages.removecustomerConfirm,
-                'Delete customer',
+                appSettings.messages.removeCustomerConfirm,
+                'Delete Customer',
                 function (confirmed) {
                     if (confirmed === true || confirmed === 1) {
                         
@@ -66,7 +66,7 @@ app.customer = (function () {
         return {
             init: init,
             show: show,
-            remove: removecustomer,
+            remove: removeCustomer,
             customer: function () {
                 return customer;
             }

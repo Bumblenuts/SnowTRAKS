@@ -10,12 +10,15 @@ app.AddCustomer = (function () {
     var addCustomerViewModel = (function () {
         
         var $newStatus;
+ //       var $CustomerName;
         var validator;
         
         var init = function () {
             
             validator = $('#enterStatus').kendoValidator().data('kendoValidator');
             $newStatus = $('#newStatus');
+
+//            $CustomerName = $('#CustomerName');
 
             $newStatus.on('keydown', app.helper.autoSizeTextarea);
         };
@@ -38,6 +41,7 @@ app.AddCustomer = (function () {
                 var customer = customers.add();
                 
                 customer.Text = $newStatus.val();
+  //              customer.CustomerName = CustomerName.val();
                 customer.UserId = app.Users.currentUser.get('data').Id;
                 
                 customers.one('sync', function () {

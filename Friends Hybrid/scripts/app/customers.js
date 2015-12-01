@@ -8,15 +8,24 @@ app.Customers = (function () {
     'use strict'
 
     // Customers model
-    var CustomersModel = (function () {
+    var customersModel = (function () {
 
-        var customersModel = {
+        var customerModel = {
 
             id: 'Id',
             fields: {
+
+                Text: {
+                    field: 'Text',
+                    defaultValue: ''
+                },
                 CreatedAt: {
                     field: 'CreatedAt',
                     defaultValue: new Date()
+                },
+                Picture: {
+                    fields: 'Picture',
+                    defaultValue: null
                 },
                 UserId: {
                     field: 'UserId',
@@ -41,11 +50,7 @@ app.Customers = (function () {
                 Mobile: {
                     fields: 'Mobile',
                     defaultValue: null
-                },
-                Picture: {
-                    fields: 'Picture',
-                    defaultValue: null
-                },
+                }
             },
             CreatedAtFormatted: function () {
 
@@ -81,7 +86,7 @@ app.Customers = (function () {
 
         // Customers data source. The Backend Services dialect of the Kendo UI DataSource component
         // supports filtering, sorting, paging, and CRUD operations.
-        var CustomersDataSource = new kendo.data.DataSource({
+        var customersDataSource = new kendo.data.DataSource({
             type: 'everlive',
             schema: {
                 model: customerModel
@@ -93,22 +98,22 @@ app.Customers = (function () {
             change: function (e) {
 
                 if (e.items && e.items.length > 0) {
-                    $('#no-Customers-span').hide();
+                    $('#no-customers-span').hide();
                 } else {
-                    $('#no-Customers-span').show();
+                    $('#no-customers-span').show();
                 }
             },
             sort: { field: 'CreatedAt', dir: 'desc' }
         });
 
         return {
-            Customers: CustomersDataSource
+            customers: customersDataSource
         };
 
     }());
 
     // Customers view model
-    var CustomersViewModel = (function () {
+    var customersViewModel = (function () {
 
         // Navigate to customerView when a customer is selected
         var customerSelected = function (e) {
@@ -133,13 +138,13 @@ app.Customers = (function () {
         };
 
         return {
-            Customers: CustomersModel.Customers,
+            customers: customersModel.customers,
             customerSelected: customerSelected,
             logout: logout
         };
 
     }());
 
-    return CustomersViewModel;
+    return customersViewModel;
 
 }());
