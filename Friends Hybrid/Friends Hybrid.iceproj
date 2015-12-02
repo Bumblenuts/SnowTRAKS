@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>7cbc55a3-ce78-43f0-b942-4be4493e3d42</ProjectGuid>
+    <ProjectName>Friends Hybrid</ProjectName>
+    <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' " />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' " />
+  <ItemGroup>
+    <Content Include=".abignore" />
+    <Content Include=".abproject" />
+    <Content Include=".debug.abproject" />
+    <Content Include=".release.abproject" />
+    <Content Include="bower_components\everlive\.bower.json" />
+    <Content Include="bower_components\everlive\.gitattributes" />
+    <Content Include="bower_components\everlive\min\everlive.all.min.js" />
+    <Content Include="bower_components\everlive\min\everlive.min.js" />
+    <Content Include="bower_components\everlive\min\expandProcessor.min.js" />
+    <Content Include="bower_components\everlive\min\jstimezonedetect.min.js" />
+    <Content Include="bower_components\everlive\min\mingo.min.js" />
+    <Content Include="bower_components\everlive\min\mongoQuery.min.js" />
+    <Content Include="bower_components\everlive\min\reqwest.min.js" />
+    <Content Include="bower_components\everlive\min\rsvp.min.js" />
+    <Content Include="bower_components\everlive\min\underscore.min.js" />
+    <Content Include="bower_components\everlive\min\uuid.min.js" />
+    <Content Include="bower_components\everlive\src\everlive.all.js" />
+    <Content Include="bower_components\everlive\src\everlive.debug.all.js" />
+    <Content Include="bower_components\everlive\src\everlive.js" />
+    <Content Include="bower_components\everlive\src\expandProcessor.js" />
+    <Content Include="bower_components\everlive\src\jstimezonedetect.js" />
+    <Content Include="bower_components\everlive\src\mingo.js" />
+    <Content Include="bower_components\everlive\src\mongoQuery.js" />
+    <Content Include="bower_components\everlive\src\reqwest.js" />
+    <Content Include="bower_components\everlive\src\rsvp.js" />
+    <Content Include="bower_components\everlive\src\underscore.js" />
+    <Content Include="bower_components\everlive\src\uuid.js" />
+    <Content Include="cordova.android.js" />
+    <Content Include="cordova.ios.js" />
+    <Content Include="cordova.wp8.js" />
+    <Content Include="index.html" />
+    <Content Include="kendo\js\jquery.min.js" />
+    <Content Include="kendo\js\kendo.mobile.min.js" />
+    <Content Include="kendo\styles\images\back.png" />
+    <Content Include="kendo\styles\images\kendoui.svg" />
+    <Content Include="kendo\styles\images\kendoui.ttf" />
+    <Content Include="kendo\styles\images\kendoui.woff" />
+    <Content Include="kendo\styles\images\wp8_icons.png" />
+    <Content Include="kendo\styles\images\wp8_inverseicons.png" />
+    <Content Include="kendo\styles\kendo.mobile.all.min.css" />
+    <Content Include="kendo\typescript\jquery.d.ts" />
+    <Content Include="kendo\typescript\kendo.mobile.d.ts" />
+    <Content Include="scripts\app\add-customer.js" />
+    <Content Include="scripts\app\customer.js" />
+    <Content Include="scripts\app\customers.js" />
+    <Content Include="scripts\app\activities.js" />
+    <Content Include="scripts\app\activity.js" />
+    <Content Include="scripts\app\add-activity.js" />
+    <Content Include="scripts\app\add-comment.js" />
+    <Content Include="scripts\app\analytics-monitor.js" />
+    <Content Include="scripts\app\app.js" />
+    <Content Include="scripts\app\comments.js" />
+    <Content Include="scripts\app\identity-provider.js" />
+    <Content Include="scripts\app\login.js" />
+    <Content Include="scripts\app\settings.js" />
+    <Content Include="scripts\app\signup.js" />
+    <Content Include="scripts\app\users.js" />
+    <Content Include="styles\images\avatar.png" />
+    <Content Include="styles\images\background-picture.png" />
+    <Content Include="styles\images\default-image.jpg" />
+    <Content Include="styles\images\icon-arrow.png" />
+    <Content Include="styles\images\icon-arrow@2x.png" />
+    <Content Include="styles\images\icon-arrow_dark.png" />
+    <Content Include="styles\images\icon-arrow_dark@2x.png" />
+    <Content Include="styles\images\icon-comment.png" />
+    <Content Include="styles\images\icon-comment@2x.png" />
+    <Content Include="styles\images\icon-delete.png" />
+    <Content Include="styles\images\icon-delete@2x.png" />
+    <Content Include="styles\images\logo-adfs.png" />
+    <Content Include="styles\images\logo-adfs@2x.png" />
+    <Content Include="styles\images\logo-facebook.png" />
+    <Content Include="styles\images\logo-facebook@2x.png" />
+    <Content Include="styles\images\logo-friends.png" />
+    <Content Include="styles\images\logo-friends@2x.png" />
+    <Content Include="styles\images\logo-google.png" />
+    <Content Include="styles\images\logo-google@2x.png" />
+    <Content Include="styles\images\logo-windows.png" />
+    <Content Include="styles\images\logo-windows@2x.png" />
+    <Content Include="styles\images\Snowplow.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\main.css" />
+    <Content Include="views\activitiesView.html" />
+    <Content Include="views\customerView.html" />
+    <Content Include="views\addCustomerView.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\customersView.html" />
+    <Content Include="views\activityView.html" />
+    <Content Include="views\addActivityView.html" />
+    <Content Include="views\addCommentView.html" />
+    <Content Include="views\noApiKey.html" />
+    <Content Include="views\signupView.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="App_Resources\Android\drawable-hdpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-mdpi\icon.png" />
+    <Resource Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
+    <Resource Include="App_Resources\iOS\Default-568h@2x.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape.png" />
+    <Resource Include="App_Resources\iOS\Default-Landscape@2x.png" />
+    <Resource Include="App_Resources\iOS\Default-Portrait.png" />
+    <Resource Include="App_Resources\iOS\Default-Portrait@2x.png" />
+    <Resource Include="App_Resources\iOS\Default.png" />
+    <Resource Include="App_Resources\iOS\Default@2x.png" />
+    <Resource Include="App_Resources\iOS\icon-40.png" />
+    <Resource Include="App_Resources\iOS\icon-40@2x.png" />
+    <Resource Include="App_Resources\iOS\icon-60.png" />
+    <Resource Include="App_Resources\iOS\icon-60@2x.png" />
+    <Resource Include="App_Resources\iOS\icon-72.png" />
+    <Resource Include="App_Resources\iOS\icon-72@2x.png" />
+    <Resource Include="App_Resources\iOS\icon-76.png" />
+    <Resource Include="App_Resources\iOS\icon-76@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small-50.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small-50@2x.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small.png" />
+    <Resource Include="App_Resources\iOS\Icon-Small@2x.png" />
+    <Resource Include="App_Resources\iOS\icon.png" />
+    <Resource Include="App_Resources\iOS\icon@2x.png" />
+    <Resource Include="App_Resources\iOS\Info.plist" />
+    <Resource Include="App_Resources\iOS\watch-172x172.png" />
+    <Resource Include="App_Resources\iOS\watch-196x196.png" />
+    <Resource Include="App_Resources\iOS\watch-48x48.png" />
+    <Resource Include="App_Resources\iOS\watch-55x55.png" />
+    <Resource Include="App_Resources\iOS\watch-58x58.png" />
+    <Resource Include="App_Resources\iOS\watch-80x80.png" />
+    <Resource Include="App_Resources\iOS\watch-87x87.png" />
+    <Resource Include="App_Resources\iOS\watch-88x88.png" />
+    <Resource Include="App_Resources\WP8\ApplicationIcon.png" />
+    <Resource Include="App_Resources\WP8\SplashScreenImage.jpg" />
+    <Resource Include="App_Resources\WP8\Tiles\Iconic\110x110.png" />
+    <Resource Include="App_Resources\WP8\Tiles\Iconic\202x202.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Resources\" />
+    <Folder Include="App_Resources\Android\" />
+    <Folder Include="App_Resources\Android\drawable-hdpi\" />
+    <Folder Include="App_Resources\Android\drawable-ldpi\" />
+    <Folder Include="App_Resources\Android\drawable-mdpi\" />
+    <Folder Include="App_Resources\Android\drawable-nodpi\" />
+    <Folder Include="App_Resources\iOS\" />
+    <Folder Include="App_Resources\WP8\" />
+    <Folder Include="App_Resources\WP8\Tiles\" />
+    <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
+    <Folder Include="bower_components\" />
+    <Folder Include="bower_components\everlive\" />
+    <Folder Include="bower_components\everlive\min\" />
+    <Folder Include="bower_components\everlive\src\" />
+    <Folder Include="kendo\" />
+    <Folder Include="kendo\js\" />
+    <Folder Include="kendo\styles\" />
+    <Folder Include="kendo\styles\images\" />
+    <Folder Include="kendo\typescript\" />
+    <Folder Include="Plugins\" />
+    <Folder Include="scripts\" />
+    <Folder Include="scripts\app\" />
+    <Folder Include="styles\" />
+    <Folder Include="styles\images\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <Import Project="$(IceniumTargets)Build.targets" />
+</Project>

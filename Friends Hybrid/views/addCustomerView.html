@@ -1,0 +1,64 @@
+<div data-role="view" id="share" data-layout="default" data-transition="overlay:down" class="add-customer-view"
+    data-init="app.AddCustomer.init" data-show="app.AddCustomer.show" data-model="app.AddCustomer">
+    <div data-role="header">
+        <div data-role="navbar">
+            Add Customer
+            <a class="nav-button" data-align="left" data-role="backbutton">Cancel</a>
+            <a class="nav-button" data-align="right" data-role="button" data-bind="click: saveCustomer">Done</a>
+        </div>
+    </div>
+
+
+    <div id="enterStatus" class="share-form-wrp">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="user-share">
+                    <textarea id="text" placeholder="Text:" required validationMessage="Comment text is required!"></textarea>
+                </li>
+                <li class="user-share">
+                    <textarea id="CustomerName" placeholder="Customer:" required validationMessage="Comment text is required!"></textarea>
+                </li>
+            </ul>
+</form>
+    </div>
+
+
+
+    <!--<div data-role="view" data-title="Add Customer" data-layout="main" data-model="app.addCustomer">
+        <div id="addCustomerModel" class="form-view">
+            <form>
+                <ul class="form-content" data-role="listview" data-style="inset">
+                    <li>
+                        <label>
+                            Name
+                            <input data-bind="value: addCustomerModel.fields.customerName" type="text">
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Street Address
+                            <input data-bind="value: addCustomerModel.fields.streetAddress" type="text">
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Home
+                            <input data-bind="value: addCustomerModel.fields.homeTel" placeholder="613 555 1234" type="tel">
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Mobile
+                            <input data-bind="value: addCustomerModel.fields.mobile" placeholder="613 555 1234" type="tel">
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Email
+                            <input data-bind="value: addCustomerModel.fields.email" placeholder="example@example.com" type="email">
+                        </label>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>-->
