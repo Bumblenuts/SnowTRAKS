@@ -60,8 +60,13 @@ app.customerList = kendo.observable({
             schema: {
                 model: {
                     fields: {
+                      
                         'CustomerName': {
                             field: 'CustomerName',
+                            defaultValue: ''
+                        },
+                         'Mobile': {
+                            field: 'Mobile',
                             defaultValue: ''
                         },
                         'Address': {
@@ -82,6 +87,21 @@ app.customerList = kendo.observable({
             itemClick: function(e) {
                 app.mobileApp.navigate('#components/customerList/details.html?uid=' + e.dataItem.uid);
             },
+             itemAdd: function(e) {
+                 
+                 var itemToAdd = {
+    'CustomerName': 'Harper Lee'
+};
+                   dataSource = customerListModel.get('dataSource'),
+                       dataSource.add(itemToAdd);
+                 dataSource.sync();
+                 customerListModel.set('currentItem', itemToAdd);
+                app.mobileApp.navigate('#components/customerList/addCustomer.html?uid=' + e.dataItem.uid);
+            },
+            
+              sync: function(e) {
+                dataSource.sync();
+            },
             detailsShow: function(e) {
                 var item = e.view.params.uid,
                     dataSource = customerListModel.get('dataSource'),
@@ -91,6 +111,17 @@ app.customerList = kendo.observable({
                 }
                 customerListModel.set('currentItem', itemModel);
             },
+                       addShow: function(e) {
+                var item = e.view.params.uid,
+                    dataSource = customerListModel.get('dataSource'),
+                    itemModel = dataSource.getByUid(item);
+                if (!itemModel.HomeTel) {
+                    itemModel.HomeTel = String.fromCharCode(160);
+                }
+                customerListModel.set('currentItem', itemModel);
+            },
+            
+            
             currentItem: null
         });
 

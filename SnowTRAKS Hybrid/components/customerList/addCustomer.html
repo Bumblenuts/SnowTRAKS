@@ -1,4 +1,4 @@
-<div data-role="view" data-title="Details" data-model="app.customerList.customerListModel" data-bind="events: { show: detailsShow }">
+<div data-role="view" data-title="addcustomer" data-model="app.customerList.customerListModel" data-bind="events: { show: addShow }">
     <header data-role="header">
         <div data-role="navbar" class="header-text">
             <a data-role="backbutton" data-align="left">Back</a>
@@ -7,7 +7,9 @@
     </header>
 
     <input type="text" data-bind="value: currentItem.Mobile" />
-     <input type="text" data-bind="value: currentItem.CustomerName" />
+     <p>
+         Customer Name
+    </p><input type="text" data-bind="value: currentItem.CustomerName" />
 <button data-bind="{  events: {click: sync}}">
     hello
     </button>
